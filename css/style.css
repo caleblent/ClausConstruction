@@ -1,36 +1,46 @@
+@import url("../last_christmas/LastChristmas_PERSONAL_USE_ONLY.otf");
+@import url("https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap");
+
 /* TOP */
 :root {
-  --orange: #d87500;
-  --light-orange: #ffb55c;
-  --green: #00d875;
-  --light-green: #91ffcd;
-  --purple: #7500d8;
-  --light-purple: #cd90ff;
-  --black: #000;
+  --red: #ed0909;
+  --light-red: #f37e7e;
+  --green: #04d246;
+  --light-green: #77e99b;
   --white: #fff;
-  --blue: #0063d8;
-  --pink: #d80063;
-  --bright-green: #63d800;
+  --black: #000;
 }
 * {
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: serif;
 }
 body {
   scroll-behavior: smooth;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
+h1 {
+  font-weight: 800;
+  font-size: 4rem;
+  font-family: "Last Christmas PERSONAL USE", serif;
+  -webkit-text-stroke: 1px var(--red);
+}
+h5 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1.2rem;
+}
 
 /* COLORS */
-.orange {
-  color: var(--orange);
+.red {
+  color: var(--red);
 }
-.bg-orange {
-  background-color: var(--orange);
+.bg-red {
+  background-color: var(--red);
 }
-.bg-light-orange {
-  background-color: var(--light-orange);
+.bg-light-red {
+  background-color: var(--light-red);
 }
 .green {
   color: var(--green);
@@ -41,47 +51,44 @@ body {
 .bg-light-green {
   background-color: var(--light-green);
 }
-.purple {
-  color: var(--purple);
-}
-.bg-purple {
-  background-color: var(--purple);
-}
-.bg-light-purple {
-  background-color: var(--light-purple);
-}
 .white {
-  color: #fff;
+  color: var(--white);
 }
 .bg-white {
-  background-color: #fff;
+  background-color: var(--white);
+}
+.black {
+  color: var(--black);
+}
+.bg-black {
+  background-color: var(--black);
 }
 /* end COLORS */
 
 /* BUTTONS */
 .btn-white {
   background-color: #fff;
-  border: 1px solid var(--orange);
-  color: var(--orange);
+  border: 1px solid var(--red);
+  color: var(--red);
 }
 .btn-white:hover {
   background-color: var(--green);
   border: 1px solid var(--white);
   color: var(--white);
 }
-.btn-orange {
-  background-color: var(--orange);
+.btn-red {
+  background-color: var(--red);
   border: 1px solid #fff;
   color: #fff;
 }
-.btn-orange:hover {
+.btn-red:hover {
   background-color: #fff;
   border: 1px solid var(--green);
   color: var(--green);
 }
 .btn-green {
   background-color: var(--green);
-  border: 1px solid var(--orange);
+  border: 1px solid var(--red);
   color: #fff;
 }
 .btn-green:hover {
@@ -105,10 +112,11 @@ body {
 header {
   font-size: 1.3rem;
 }
-header .brand {
+header .navbar-brand h2 {
   color: #fff;
-  font-style: 2rem;
-  font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: "Last Christmas PERSONAL USE", serif;
 }
 .nav-link {
   color: #fff !important;
@@ -119,7 +127,7 @@ header .brand {
 }
 .nav-target {
   position: relative;
-  top: -86px;
+  top: -96px;
 }
 /* end HEADER + NAVBAR */
 
@@ -147,22 +155,19 @@ header .brand {
 }
 @media (max-width: 767.98px) {
   #home-section .hero {
-    height: 500px;
+    height: 300px;
   }
 }
 #home-section h1 {
-  -webkit-text-stroke: 2px var(--orange);
+  -webkit-text-stroke: 2px var(--red);
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 5rem;
 }
 /* end HOME */
 
 /* ABOUT */
 section#about-section {
   font-size: 1.1rem;
-}
-#about-section h1 {
-  /* font-size: 3rem; */
 }
 /* end ABOUT */
 
@@ -172,7 +177,7 @@ section#services-section {
 }
 .card-effect {
   /* box-shadow: var(--box-shadow); */
-  background-color: var(--orange);
+  background-color: var(--red);
   padding: 1.5rem;
   margin: 0.25rem;
   /* transition: all 0.35s ease; */
@@ -184,7 +189,7 @@ section#services-section {
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  color: var(--orange);
+  color: var(--red);
   font-size: 32px;
   border-radius: 100px;
   flex: none;
@@ -238,7 +243,7 @@ section#services-section {
 .project {
   position: relative;
   overflow: hidden;
-  border: 2px solid var(--orange);
+  border: 2px solid var(--red);
 }
 .project .overlay {
   position: absolute;
@@ -246,7 +251,7 @@ section#services-section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(232, 117, 0, 0.5);
+  background-color: rgba(255, 64, 64, 0.5);
   padding: 30px;
   display: flex;
   align-items: flex-end;
@@ -282,7 +287,7 @@ section#services-section {
 }
 #contact-section .input-group-text {
   border-color: #000;
-  color: var(--orange);
+  color: var(--red);
 }
 #contact-section i {
   font-style: normal;
@@ -293,13 +298,13 @@ section#services-section {
   border: 1px solid #000;
 }
 #contact-section h1 {
-  font-size: 2.4em;
+  font-size: 3em;
   font-weight: 600;
-  -webkit-text-stroke: 1px var(--orange);
+  -webkit-text-stroke: 1px var(--red);
 }
 #contact-section img {
   max-width: 100%;
-  border: 2px solid var(--orange);
+  border: 2px solid var(--red);
 }
 #contact-section button {
   width: 50%;
@@ -311,13 +316,17 @@ section#services-section {
 /* FOOTER */
 footer a {
   text-decoration: none;
-  font-weight: 600;
 }
 footer a:hover {
   color: var(--green);
   text-decoration: underline;
 }
+footer a#dev {
+  font-weight: 600;
+  font-family: "Mountains of Christmas", serif;
+}
 footer .brand {
-  font-weight: 800;
+  font-weight: 700;
+  font-family: "Mountains of Christmas", serif;
 }
 /* end FOOTER */
