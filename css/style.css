@@ -21,18 +21,6 @@ body {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
-.parallax-img {
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-@media (max-width: 575.98px) {
-  .parallax-img {
-    /* display: none; */
-    background-attachment: local;
-  }
-}
 
 /* COLORS */
 .orange {
@@ -129,38 +117,15 @@ header .brand {
   color: #fff;
   text-shadow: 2px 2px 4px var(--green), -2px -2px 4px var(--green);
 }
-/* .nav-link.active {
-  font-style: italic;
-  background: rgba(255, 255, 255, 0.5);
-  color: var(--purple);
-} */
 .nav-target {
   position: relative;
   top: -86px;
 }
-.active {
-  background: rgba(255, 255, 255, 0.5);
-}
 /* end HEADER + NAVBAR */
-
-/* NAVBAR 2 */
-/* .navbar ul.navbar-nav li:hover {
-  background: rgba(255, 255, 255, 0.5);
-  color: #000;
-}
-.navbar ul.navbar-nav li a {
-  color: #fff;
-  font-size: 1em;
-  font-weight: 500;
-}
-.navbar ul.navbar-nav li.active a,
-.navbar ul.navbar-nav li:hover a {
-  color: #000;
-} */
 
 /* HOME */
 #home-section .hero {
-  background-image: url();
+  background-image: url(../img/santa-hero.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -195,6 +160,9 @@ header .brand {
 /* ABOUT */
 section#about-section {
   font-size: 1.1rem;
+}
+#about-section h1 {
+  /* font-size: 3rem; */
 }
 /* end ABOUT */
 
@@ -238,28 +206,33 @@ section#services-section {
   opacity: 0;
   transition: all 0.4s ease;
 }
-.service svg {
-  width: 70%;
-  margin: 0 auto;
-}
 .service:hover::after {
   opacity: 1;
   top: 0;
 }
 /* end SERVICES */
 
-/* PARALLAX-1 */
-#parallax-1 .parallax-img {
-  background-image: url();
+/* PARALLAX */
+.parallax-img {
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/santa-hero.jpg);
   height: 600px;
   filter: grayscale(40%);
 }
+@media (max-width: 575.98px) {
+  .parallax-img {
+    display: none;
+  }
+}
 @media (max-width: 767.98px) {
-  #parallax-1 .parallax-img {
+  .parallax-img {
     height: 600px;
   }
 }
-/* end PARALLAX-1 */
+/* end PARALLAX */
 
 /* MY WORK */
 .project {
@@ -301,19 +274,6 @@ section#services-section {
 }
 
 /* end MY WORK */
-
-/* PARALLAX-2 */
-#parallax-2 .parallax-img {
-  background-image: url();
-  height: 600px;
-  filter: sepia(40%);
-}
-@media (max-width: 767.98px) {
-  #parallax-2 .parallax-img {
-    height: 600px;
-  }
-}
-/* end PARALLAX-1 */
 
 /* CONTACT */
 #contact-section {
