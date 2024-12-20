@@ -1,0 +1,363 @@
+/* TOP */
+:root {
+  --orange: #d87500;
+  --light-orange: #ffb55c;
+  --green: #00d875;
+  --light-green: #91ffcd;
+  --purple: #7500d8;
+  --light-purple: #cd90ff;
+  --black: #000;
+  --white: #fff;
+  --blue: #0063d8;
+  --pink: #d80063;
+  --bright-green: #63d800;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.parallax-img {
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 575.98px) {
+  .parallax-img {
+    /* display: none; */
+    background-attachment: local;
+  }
+}
+
+/* COLORS */
+.orange {
+  color: var(--orange);
+}
+.bg-orange {
+  background-color: var(--orange);
+}
+.bg-light-orange {
+  background-color: var(--light-orange);
+}
+.green {
+  color: var(--green);
+}
+.bg-green {
+  background-color: var(--green);
+}
+.bg-light-green {
+  background-color: var(--light-green);
+}
+.purple {
+  color: var(--purple);
+}
+.bg-purple {
+  background-color: var(--purple);
+}
+.bg-light-purple {
+  background-color: var(--light-purple);
+}
+.white {
+  color: #fff;
+}
+.bg-white {
+  background-color: #fff;
+}
+/* end COLORS */
+
+/* BUTTONS */
+.btn-white {
+  background-color: #fff;
+  border: 1px solid var(--orange);
+  color: var(--orange);
+}
+.btn-white:hover {
+  background-color: var(--green);
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+.btn-orange {
+  background-color: var(--orange);
+  border: 1px solid #fff;
+  color: #fff;
+}
+.btn-orange:hover {
+  background-color: #fff;
+  border: 1px solid var(--green);
+  color: var(--green);
+}
+.btn-green {
+  background-color: var(--green);
+  border: 1px solid var(--orange);
+  color: #fff;
+}
+.btn-green:hover {
+  background-color: #fff;
+  border: 1px solid var(--green);
+  color: var(--green);
+}
+.close-btn {
+  text-decoration: none;
+  font-size: 2rem;
+  width: 100%;
+  height: 100%;
+}
+.close-btn:hover {
+  background-color: var(--green);
+  cursor: pointer;
+}
+/* end BUTTONS */
+
+/* HEADER + NAVBAR */
+header {
+  font-size: 1.3rem;
+}
+header .brand {
+  color: #fff;
+  font-style: 2rem;
+  font-weight: bold;
+}
+.nav-link {
+  color: #fff !important;
+}
+.nav-link:hover {
+  color: #fff;
+  text-shadow: 2px 2px 4px var(--green), -2px -2px 4px var(--green);
+}
+/* .nav-link.active {
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--purple);
+} */
+.nav-target {
+  position: relative;
+  top: -86px;
+}
+.active {
+  background: rgba(255, 255, 255, 0.5);
+}
+/* end HEADER + NAVBAR */
+
+/* NAVBAR 2 */
+/* .navbar ul.navbar-nav li:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: #000;
+}
+.navbar ul.navbar-nav li a {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 500;
+}
+.navbar ul.navbar-nav li.active a,
+.navbar ul.navbar-nav li:hover a {
+  color: #000;
+} */
+
+/* HOME */
+#home-section .hero {
+  background-image: url();
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+  font-size: 1.4rem;
+}
+#home-section .hero::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* ADJUST BELOW LATER*/
+  background-color: rgba(0, 0, 0, 0.5);
+  /* ADJUST ABOVE LATER*/
+  z-index: -1;
+}
+@media (max-width: 767.98px) {
+  #home-section .hero {
+    height: 500px;
+  }
+}
+#home-section h1 {
+  -webkit-text-stroke: 2px var(--orange);
+  font-weight: bold;
+  font-size: 4rem;
+}
+/* end HOME */
+
+/* ABOUT */
+section#about-section {
+  font-size: 1.1rem;
+}
+/* end ABOUT */
+
+/* SERVICES */
+section#services-section {
+  font-size: 1.1rem;
+}
+.card-effect {
+  /* box-shadow: var(--box-shadow); */
+  background-color: var(--orange);
+  padding: 1.5rem;
+  margin: 0.25rem;
+  /* transition: all 0.35s ease; */
+}
+.iconbox {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: var(--orange);
+  font-size: 32px;
+  border-radius: 100px;
+  flex: none;
+}
+.service {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.service::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color: var(--green);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.service svg {
+  width: 70%;
+  margin: 0 auto;
+}
+.service:hover::after {
+  opacity: 1;
+  top: 0;
+}
+/* end SERVICES */
+
+/* PARALLAX-1 */
+#parallax-1 .parallax-img {
+  background-image: url();
+  height: 600px;
+  filter: grayscale(40%);
+}
+@media (max-width: 767.98px) {
+  #parallax-1 .parallax-img {
+    height: 600px;
+  }
+}
+/* end PARALLAX-1 */
+
+/* MY WORK */
+.project {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--orange);
+}
+.project .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(232, 117, 0, 0.5);
+  padding: 30px;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+.project img {
+  transition: all 0.4s ease;
+}
+.project:hover .overlay {
+  opacity: 1;
+}
+.project:hover img {
+  transform: scale(1.1);
+}
+.gallery {
+  flex-wrap: wrap;
+}
+.gallery-item {
+  padding: 10px;
+  border: 3px solid var(--light-orange);
+}
+.gallery-item:hover {
+  background-color: var(--green);
+}
+
+/* end MY WORK */
+
+/* PARALLAX-2 */
+#parallax-2 .parallax-img {
+  background-image: url();
+  height: 600px;
+  filter: sepia(40%);
+}
+@media (max-width: 767.98px) {
+  #parallax-2 .parallax-img {
+    height: 600px;
+  }
+}
+/* end PARALLAX-1 */
+
+/* CONTACT */
+#contact-section {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+#contact-section .input-group-text {
+  border-color: #000;
+  color: var(--orange);
+}
+#contact-section i {
+  font-style: normal;
+  -webkit-text-stroke: 1px var(--black);
+  font-size: 1.3rem;
+}
+#contact-section input {
+  border: 1px solid #000;
+}
+#contact-section h1 {
+  font-size: 2.4em;
+  font-weight: 600;
+  -webkit-text-stroke: 1px var(--orange);
+}
+#contact-section img {
+  max-width: 100%;
+  border: 2px solid var(--orange);
+}
+#contact-section button {
+  width: 50%;
+  margin: 0;
+  font-weight: 600;
+}
+/* end CONTACT */
+
+/* FOOTER */
+footer a {
+  text-decoration: none;
+  font-weight: 600;
+}
+footer a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+footer .brand {
+  font-weight: 800;
+}
+/* end FOOTER */
