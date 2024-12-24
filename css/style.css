@@ -167,13 +167,13 @@ header .navbar-brand h2 {
 /* end HOME */
 
 /* ABOUT */
-section#about-section {
+#about-section {
   font-size: 1.1rem;
 }
 /* end ABOUT */
 
 /* SERVICES */
-section#services-section {
+#services-section {
   font-size: 1.1rem;
 }
 .card-effect {
