@@ -1,4 +1,5 @@
-@import url("../last_christmas/LastChristmas_PERSONAL_USE_ONLY.otf");
+/* FONTS */
+@import url("../fonts/LastChristmas.otf");
 @import url("https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap");
 
 /* TOP */
@@ -160,7 +161,7 @@ header .navbar-brand h2 {
 }
 #home-section h1 {
   -webkit-text-stroke: 2px var(--red);
-  font-weight: bold;
+  font-weight: 800;
   font-size: 5rem;
 }
 /* end HOME */
